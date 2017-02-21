@@ -18,5 +18,6 @@ public class JavaMain {
 		javaInt3.method1(1);
 		javaInt3.method1(1,2);
 		javaInt3.method1(1,2,3);
+		JavaInterface1.method2();
 }
 }

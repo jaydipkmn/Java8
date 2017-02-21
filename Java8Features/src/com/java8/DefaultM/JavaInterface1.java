@@ -10,4 +10,9 @@ public interface JavaInterface1 {
 	{
 		System.out.println("this is interface method");
 	}
+	
+	static void method2()
+	{
+		System.out.println("this is  static method");
+	}
 	}
