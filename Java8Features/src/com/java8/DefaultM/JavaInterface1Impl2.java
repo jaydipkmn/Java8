@@ -15,7 +15,7 @@ public class JavaInterface1Impl2 implements JavaInterface1{
 	}
 	@Override
 	public void method1(int a, int b) {
-		System.out.println("method " +a + " Method " +b);
+		System.out.println("IMPL 2 method " +a + " Method " +b);
 		
 	}
 
