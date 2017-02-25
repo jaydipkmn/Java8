@@ -24,6 +24,9 @@ public class MappingUsingLamda {
 		System.out.println("\n using java8 mapToInt");
 		persons.stream().mapToInt(x->x.getAge()).forEach(x->System.out.print(x +" "));
 		
+		//filtering mapping together 
+		System.out.println("\n using java8 mapToInt and filetering ==> age >= 25");
+		persons.stream().mapToInt(x->x.getAge()).filter(x->x>=25).forEach(x->System.out.print(x +" "));
 		
 	}
 
