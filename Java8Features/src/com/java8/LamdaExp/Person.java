@@ -13,6 +13,11 @@ public class Person {
 	}
 		
 	@Override
+	public String toString() {
+		return "Person [fName=" + fName + ", lName=" + lName + ", age=" + age + "]";
+	}
+
+	@Override
 	public boolean equals(Object obj) {
 	    if(obj instanceof Person)
 	    {
