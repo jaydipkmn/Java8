@@ -17,10 +17,13 @@ public class MappingUsingLamda {
 		
 		for(Person p :  persons)
 			System.out.print(p.getAge() + " ");
-		
 		//java 8 mapping
-		System.out.println("using java8 map");
+		System.out.println("\n using java8 map");
 		persons.stream().map(x->x.getAge()).forEach(x->System.out.print(x +" "));
+
+		System.out.println("\n using java8 mapToInt");
+		persons.stream().mapToInt(x->x.getAge()).forEach(x->System.out.print(x +" "));
+		
 		
 	}
 
