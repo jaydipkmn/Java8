@@ -1,5 +1,6 @@
 package com.java8.LamdaExp;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class FilteringUsingLamda {
 
@@ -16,6 +17,10 @@ public class FilteringUsingLamda {
 				filteredList.add(i);
 		}
 		System.out.println(filteredList);
+		
+		//here comes java 8
+		List <Integer> filteredList2 = numbers.stream().filter(x-> x%2==0).collect(Collectors.toList());
+		System.out.println(filteredList2);
 	}
 
 }
