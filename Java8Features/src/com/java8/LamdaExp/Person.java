@@ -11,6 +11,22 @@ public class Person {
 		this.lName = lName;
 		this.age = age;
 	}
+		
+	@Override
+	public boolean equals(Object obj) {
+	    if(obj instanceof Person)
+	    {
+	        Person temp = (Person) obj;
+	        if(this.getfName() == temp.getfName() && this.getlName()== temp.getlName() && this.getAge() == temp.getAge())
+	            return true;
+	    }
+	    return false;
+
+	}
+	@Override
+	public int hashCode() {
+	    return (this.getfName().hashCode() + this.getlName().hashCode());        
+	}
 	public String getfName() {
 		return fName;
 	}
