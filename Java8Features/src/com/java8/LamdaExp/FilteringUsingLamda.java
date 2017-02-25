@@ -1,5 +1,6 @@
 package com.java8.LamdaExp;
 import java.util.*;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class FilteringUsingLamda {
@@ -21,6 +22,13 @@ public class FilteringUsingLamda {
 		//here comes java 8
 		List <Integer> filteredList2 = numbers.stream().filter(x-> x%2==0).collect(Collectors.toList());
 		System.out.println(filteredList2);
+		
+		//With predicates
+		Predicate<Integer > p = (x)-> (x%2==0);
+		List <Integer> filteredList3 = numbers.stream().filter(p).collect(Collectors.toList());
+		System.out.println(filteredList3);
+		
+		
 	}
 
 }
