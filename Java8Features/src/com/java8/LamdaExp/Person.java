@@ -1,6 +1,6 @@
 package com.java8.LamdaExp;
 
-public class Person {
+public class Person implements Comparable<Person> {
 	
 	private String fName;
 	private String lName;
@@ -49,6 +49,11 @@ public class Person {
 	}
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	@Override
+	public int compareTo(Person arg0) {
+		return this.fName.compareTo(arg0.fName);
 	}
 	
 

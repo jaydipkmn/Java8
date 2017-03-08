@@ -8,12 +8,12 @@ public class MappingUsingLamda {
 	public static void main(String[] args) {
 		List <Person> persons =  new ArrayList<>();
 		persons.add(new Person ("A","B",24));
-		persons.add(new Person ("C","D",34));
-		persons.add(new Person ("E","F",43));
 		persons.add(new Person ("G","H",50));
-		persons.add(new Person ("I","J",19));
+		persons.add(new Person ("C","D",34));
 		persons.add(new Person ("I","J",19));
 		persons.add(new Person ("K","L",9));
+		persons.add(new Person ("E","F",43));
+		persons.add(new Person ("I","J",19));
 		
 		// print just age from above list
 		
@@ -30,13 +30,19 @@ public class MappingUsingLamda {
 		System.out.println("\n using java8 mapToInt and filetering ==> age >= 25");
 		persons.stream().mapToInt(x->x.getAge()).filter(x->x>=25).forEach(x->System.out.print(x +" "));
 		
+		System.out.println("\n Sorting Persons based on Fname \n before");
+		printPerson(persons);
+		Collections.sort(persons);
+		System.out.println( "\n after");
+		printPerson(persons);
+		
 		//filtering mapping together 
 		System.out.println("\n removing duplicates values using distinct \n before");
-		
 		printPerson(persons);
 		persons = persons.stream().distinct().collect(Collectors.toList());
 		System.out.println( "\n after");
 		printPerson(persons);
+		
 		
 	}
 
