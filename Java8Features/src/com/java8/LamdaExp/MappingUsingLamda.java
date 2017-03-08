@@ -36,13 +36,18 @@ public class MappingUsingLamda {
 		System.out.println( "\n after");
 		printPerson(persons);
 		
+		System.out.println("\n Sorting Persons based on Age Using Age Comparator \n before");
+        printPerson(persons);
+        Collections.sort(persons,new AgeComparator<>());
+        System.out.println( "\n after");
+        printPerson(persons);
+        
 		//filtering mapping together 
 		System.out.println("\n removing duplicates values using distinct \n before");
 		printPerson(persons);
 		persons = persons.stream().distinct().collect(Collectors.toList());
 		System.out.println( "\n after");
 		printPerson(persons);
-		
 		
 	}
 
