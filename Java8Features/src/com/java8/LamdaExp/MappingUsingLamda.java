@@ -39,8 +39,17 @@ public class MappingUsingLamda {
 		System.out.println("\n Sorting Persons based on Age Using Age Comparator \n before");
         printPerson(persons);
         Collections.sort(persons,new AgeComparator<>());
+        // persons.sort(new AgeComparator<>());
         System.out.println( "\n after");
         printPerson(persons);
+        
+        System.out.println("\n Sorting Persons Using Lambada Expression \n before");
+        printPerson(persons);
+        Collections.sort(persons,(p1,p2)->{  
+            return p1.getfName().compareTo(p2.getfName());  
+            }); 
+        System.out.println( "\n after");
+        printPerson(persons); 
         
 		//filtering mapping together 
 		System.out.println("\n removing duplicates values using distinct \n before");
