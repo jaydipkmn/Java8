@@ -54,9 +54,12 @@ public class MappingUsingLamda {
 		//filtering mapping together 
 		System.out.println("\n removing duplicates values using distinct \n before");
 		printPerson(persons);
-		persons = persons.stream().distinct().collect(Collectors.toList());
+		List<Person> distinctPersons= persons.stream().distinct().collect(Collectors.toList());
 		System.out.println( "\n after");
-		printPerson(persons);
+		printPerson(distinctPersons);
+		
+		// Intermediate sorted operation of Stream
+		persons.stream().sorted(new AgeComparator<>()).forEach(System.out::println);
 		
 	}
 
